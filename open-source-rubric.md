@@ -23,7 +23,7 @@ Use story points as a signal of *complexity and risk*, not just throughput:
 
 - **Volume of trivial work does not equal a strong grade.** A student who only ever picks up 1-point tasks — and does a lot of them — has avoided the harder judgment calls this work requires (design trade-offs, ambiguity, integration risk). High volume at low complexity caps out around a C/B-, regardless of how many issues were completed.
 - **Ambition has a flip side.** Taking on a large task (5+ points) is worth encouraging, but a big task that's started and never finished (i.e., abandoned issues, never merged solutions, or requiring a teammate to bail it out later) has effectively zero impact on the project and carries real risk. That risk will show up in the grade.
-- **What earns an A** is a track record of work scoped appropriately to your current skill level and at that given point in the term. Consistently landing tasks in the 3–5 point range (or successfully breaking a larger task into shippable increments), with most of what was taken on actually merged, is an excellent way to ensure you are meeting the mark for this category.
+- **What earns an A** is a track record of work scoped appropriately to your current skill level at a given point in the term. Consistently landing tasks in the 3–5 point range (or successfully breaking a larger task into shippable increments), with most of what was taken on actually merged, is an excellent way to ensure you are meeting the mark for this category.
 
 **A note on early feedback and iteration.** This category grades what gets *merged*, not the quality of the initial Pull Request/early commits. 
 Opening a PR early, even a draft, before every edge case is handled, to surface design questions and get reviewer eyes 
@@ -87,7 +87,7 @@ first draft drew comments. A review thread with zero comments isn't automaticall
 | **B** | Mostly consistent with minimal gaps; generally professional.                                                                                                                 |
 | **C** | Bursty/last-minute contribution pattern; communication is reactive rather than proactive.                                                                                    |
 | **D** | Long stretches of silence with little communication, moments of unprofessional communication.                                                                                |
-| **F** | Disappeared from the project, or conduct was unprofessional.                                                                                                                 |
+| **F** | No communication; disappeared from the project; conduct was unprofessional.                                                                                                  |
 
 ---
 
