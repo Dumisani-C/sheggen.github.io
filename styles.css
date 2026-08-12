@@ -1,0 +1,228 @@
+:root{
+  --bg: #12151a;
+  --surface: #1b2029;
+  --surface-hi: #232a35;
+  --line: #313947;
+  --text: #e4e1d6;
+  --muted: #8b93a1;
+  --accent: #e3a857;
+  --accent2: #4fa98a;
+  --serif: "Newsreader", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --max: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, rgba(228,225,214,0.035) 1px, transparent 0);
+  background-size: 22px 22px;
+  z-index: 0;
+}
+
+a { color: inherit; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap{
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+}
+
+/* ---------- Hero ---------- */
+
+.eyebrow{
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  margin: 0 0 1rem;
+}
+
+.eyebrow::before{ content: "// "; color: var(--muted); }
+
+h1{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  line-height: 1.08;
+  margin: 0;
+  color: #f4f2ea;
+}
+
+.role{
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.role .accent{ color: var(--accent); }
+
+.bio{
+  font-size: 1.125rem;
+  max-width: 58ch;
+  color: var(--text);
+  margin-top: 1rem;
+}
+
+.bio p { margin: 0 0 1rem; }
+
+/* ---------- Section headers ---------- */
+
+section{ margin-top: 1rem; }
+
+.section-head{
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+}
+
+.section-head h2{
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 0;
+}
+
+.section-head .path{
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ---------- Commit-log style link list ---------- */
+
+.log{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.log-entry{
+  border-bottom: 1px solid var(--line);
+}
+
+.log-entry:last-child{ border-bottom: none; }
+
+.log-entry a{
+  display: block;
+  padding: 1.1rem 1.25rem;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.log-entry a:hover,
+.log-entry a:focus-visible{
+  background: var(--surface-hi);
+}
+
+.log-meta{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.log-hash{
+  color: var(--accent);
+}
+
+.log-title{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 0 0 0.3rem;
+}
+
+.log-desc{
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.log-arrow{
+  float: right;
+  color: var(--accent2);
+  font-family: var(--mono);
+}
+
+/* ---------- Footer / contact ---------- */
+
+footer{
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+footer .links{
+  display: flex;
+  gap: 1.25rem;
+}
+
+footer a{
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+footer a:hover{
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (max-width: 480px){
+  .wrap{ padding: 4rem 1.25rem 3rem; }
+  .log-arrow{ display: none; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  .log-entry a{ transition: none; }
+}
